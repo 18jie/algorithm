@@ -30,13 +30,14 @@ public class NSum {
             TreeSet<Integer> set = new TreeSet<>(temp);
             temp.add(target);
             res.add(temp);
-            for (int i = 1; i <= m / 2; i++) {
+            for (int i = 1; i <= m; i++) {
+                if(target - i < 0){
+                    break;
+                }
                 if (!set.contains(i) && target - i > 0) {
                     set.add(i);
                     helper(res, set, m, target - i);
-                } else if (!set.contains(i) && target - i == 0) {
-                    set.add(i);
-                    res.add(set);
+                    break;
                 }
             }
         }
