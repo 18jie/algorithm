@@ -1,7 +1,5 @@
 package sortalgorithm;
 
-import com.sun.deploy.util.ArrayUtil;
-
 import java.util.Arrays;
 
 /**
@@ -40,6 +38,7 @@ public class QuickSort {
     public static void main(String[] args) {
         QuickSort q = new QuickSort();
         int[] randomArray = ArrayUtils.getRandomArray(15);
+        int[] randomArray1 =  ArrayUtils.getRandomArray(13);
         System.out.println(Arrays.toString(randomArray));
         q.sort(randomArray);
         System.out.println(Arrays.toString(randomArray));
