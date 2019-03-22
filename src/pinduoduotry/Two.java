@@ -1,7 +1,5 @@
 package pinduoduotry;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -34,12 +32,7 @@ public class Two {
         }
         str.insert(0, result[0]);
 
-        BigInteger big1 = new BigInteger(numStrs[0]);
-        BigInteger big2 = new BigInteger(numStrs[1]);
         System.out.println(str.toString());
-        System.out.println(big1.multiply(big2).toString());
-
-        System.out.println(str.toString().equals(big1.multiply(big2).toString()));
 
     }
 

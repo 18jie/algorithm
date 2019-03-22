@@ -10,13 +10,14 @@ public class One {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int num = Integer.parseInt(sc.nextLine());
         String[] strs = sc.nextLine().split(" ");
 
         if (strs.length == 3) {
             System.out.println(Integer.parseInt(strs[0]) * Integer.parseInt(strs[1]) * Integer.parseInt(strs[2]));
         } else {
-            int[] positive = {Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE};
-            int[] negative = {Integer.MAX_VALUE, Integer.MAX_VALUE};
+            int[] positive = {1, 1, 1};
+            int[] negative = {1, 1};
             for (String s : strs) {
                 changeValue(Integer.parseInt(s), positive, negative);
             }
@@ -28,9 +29,6 @@ public class One {
     }
 
     public static void changeValue(int value, int[] positive, int[] negative) {
-        if (value == Integer.MIN_VALUE || value == Integer.MAX_VALUE) {
-            return;
-        }
         if (value > positive[0]) {
             int temp = positive[0];
             positive[0] = value;

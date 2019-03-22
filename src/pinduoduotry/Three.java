@@ -11,9 +11,9 @@ public class Three {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int people = sc.nextInt();
+        int people = Integer.parseInt(sc.nextLine());
         String[] needStrs = sc.nextLine().split(" ");
-        int owned = sc.nextInt();
+        int owned = Integer.parseInt(sc.nextLine());
         String[] ownedStrs = sc.nextLine().split(" ");
 
         int[] needs = new int[people];
