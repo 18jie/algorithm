@@ -8,8 +8,6 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
-    private int i;
-
     public void sort(int[] array) {
         doSort(array,0,array.length - 1);
     }
@@ -37,8 +35,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         QuickSort q = new QuickSort();
-        int[] randomArray = ArrayUtils.getRandomArray(15);
-        int[] randomArray1 =  ArrayUtils.getRandomArray(13);
+        int[] randomArray = ArrayUtils.getRandomArray(100);
         System.out.println(Arrays.toString(randomArray));
         q.sort(randomArray);
         System.out.println(Arrays.toString(randomArray));

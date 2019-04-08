@@ -1,8 +1,8 @@
 package jianzhioffer;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
+import java.util.Scanner;
 
 /**
  * @author fengjie
@@ -10,13 +10,13 @@ import java.util.Objects;
  */
 public class MovingCount {
 
-    public int movingCount(int threshold, int rows, int cols) {
+    public static int movingCount(int threshold, int rows, int cols) {
         HashSet<MyPoint> points = new HashSet<>();
         solution(0, 0, rows - 1, cols - 1, threshold, points);
         return points.size();
     }
 
-    public void solution(int x, int y, int lx, int ly, int threshold, HashSet<MyPoint> total) {
+    public static void solution(int x, int y, int lx, int ly, int threshold, HashSet<MyPoint> total) {
         if (!(x > lx || y > ly || calc(x, y) > threshold || total.contains(new MyPoint(x, y)))) {
             total.add(new MyPoint(x, y));
 //            System.out.println("pre : " + " x : " + x + " y :" + y);
@@ -26,7 +26,7 @@ public class MovingCount {
         }
     }
 
-    public int calc(int x, int y) {
+    public static int calc(int x, int y) {
         int total = 0;
         while (x > 0) {
             total += x % 10;
@@ -40,8 +40,9 @@ public class MovingCount {
     }
 
     public static void main(String[] args) {
-        MovingCount m = new MovingCount();
-        int i = m.movingCount(15, 20, 20);
+        Scanner sc = new Scanner(System.in);
+        String[] nums = sc.nextLine().split(" ");
+        int i = movingCount(Integer.parseInt(nums[2]), Integer.parseInt(nums[0]), Integer.parseInt(nums[1]));
         System.out.println(i);
     }
 

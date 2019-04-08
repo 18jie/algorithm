@@ -20,10 +20,9 @@ public class TestJson {
 //        fieldEx.put("field",map);
 //        String s = JSONObject.toJSONString(fieldEx);
 //        System.out.println(s);
+        // 6000000 --> 60M
 
-        List<String> list = new ArrayList<>();
-        Class<? extends List> aClass = list.getClass();
-        System.out.println(aClass);
+        System.out.println(6000000 / 4);
     }
 
 }
