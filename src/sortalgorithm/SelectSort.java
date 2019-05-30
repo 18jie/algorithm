@@ -9,7 +9,6 @@ import java.util.Arrays;
 public class SelectSort {
 
     public static void sort(int[] nums) {
-
         for (int i = 0; i < nums.length; i++) {
             int min = nums[i];
             int minIndex = i;
