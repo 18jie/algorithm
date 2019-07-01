@@ -2,9 +2,7 @@ package test;
 
 import java.io.*;
 import java.util.Arrays;
-import java.util.PrimitiveIterator;
 import java.util.Random;
-import java.util.stream.IntStream;
 
 /**
  * @author fengjie

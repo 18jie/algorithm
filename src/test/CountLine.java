@@ -26,7 +26,6 @@ public class CountLine {
 						countLine++;
 					}
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}else {
@@ -40,8 +39,8 @@ public class CountLine {
 	
 	public static void main(String[] args) {
 		List<String> files = new ArrayList<String>();
-		files.add("D:\\IDEAWorkplace\\course-program\\src\\main\\java\\com\\fengjie\\courseprogram");
-		files.add("D:\\IDEAWorkplace\\course-program\\src\\main\\resources\\templates");
+		files.add("D:\\program_project\\idea_workplace\\course-program\\src\\main\\java");
+		files.add("D:\\program_project\\idea_workplace\\course-program\\src\\main\\resources\\templates");
 		countCodeLine(files);
 		System.out.println(countLine);
 	}
